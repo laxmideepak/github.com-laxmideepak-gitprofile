@@ -1,45 +1,42 @@
 // gitprofile.config.ts
 const CONFIG = {
   github: {
-    username: 'laxmideepak', // Your GitHub org/user name. (This is the only required config)
+    username: 'laxmideepak', // GitHub username (required)
   },
-  /**
-   * If you are deploying to https://<username>.github.io/, for example your repository is at https://github.com/arifszn/arifszn.github.io, set base to '/'.
-   * If you are deploying to https://<username>.github.io/<repo_name>/,
-   * for example your repository is at https://github.com/arifszn/portfolio, then set base to '/portfolio/'.
-   */
   base: '/',
+
   projects: {
     github: {
-      display: true, // Display GitHub projects?
-      header: 'Github Projects',
-      mode: 'automatic', // Mode can be: 'automatic' or 'manual'
+      display: true,
+      header: 'GitHub Projects',
+      mode: 'automatic',
       automatic: {
-        sortBy: 'stars', // Sort projects by 'stars' or 'updated'
-        limit: 8, // How many projects to display.
+        sortBy: 'stars',
+        limit: 8,
         exclude: {
-          forks: false, // Forked projects will not be displayed if set to true.
-          projects: [], // These projects will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
+          forks: false,
+          projects: [],
         },
       },
       manual: {
-        // Properties for manually specifying projects
-        projects: [], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
+        projects: [],
       },
     },
     external: {
       header: 'My Projects',
-      // To hide the `External Projects` section, keep it empty.
       projects: [],
     },
   },
+
   seo: {
     title: 'Portfolio of Laxmi Deepak Nelapatla',
-    description: '',
+    description:
+      'Full‑stack Software Engineer specializing in Python, Java, TypeScript, and AWS. Passionate about low‑latency APIs, distributed systems, and intuitive user experiences.',
     imageURL: '',
   },
+
   social: {
-    linkedin: '',
+    linkedin: 'https://www.linkedin.com/in/laxmideepak-nelapatla-2a1a8b190/',
     twitter: '',
     mastodon: '',
     researchGate: '',
@@ -57,46 +54,115 @@ const CONFIG = {
     skype: '',
     telegram: '',
     website: '',
-    phone: '',
-    email: '',
+    phone: '469-987-2828',
+    email: 'laxmideepak2023@gmail.com',
   },
+
   resume: {
-    fileUrl: '', // Empty fileUrl will hide the `Download Resume` button.
+    // If you host your resume in the public folder, you can reference it like "/resume.pdf"
+    fileUrl: '/Laxmideepak_Nelapatla_SDE.pdf',
   },
-  skills: [],
-  experiences: [],
+
+  skills: [
+    // Languages & Frameworks
+    'Python',
+    'Java',
+    'TypeScript',
+    'SQL',
+    'React.js',
+    'React Native',
+    'Node.js',
+    'Spring Boot',
+    'GraphQL',
+    'Hack',
+    // Cloud & DevOps
+    'AWS',
+    'Docker',
+    'Kubernetes',
+    'GitHub Actions',
+    // Databases & Infra
+    'MySQL',
+    'PostgreSQL',
+    'MongoDB',
+    'Redis',
+    'Kafka',
+    // ML & Data
+    'TensorFlow',
+    'Keras',
+    'PyTorch',
+    'Pandas',
+    'NumPy',
+    'Scikit‑learn',
+    // Testing & Tools
+    'Jest',
+    'PyTest',
+    'Lighthouse',
+    'axe‑core',
+  ],
+
+  experiences: [
+    {
+      company: 'UTA Honors College',
+      position: 'Software Engineer – Graduate Research Assistant',
+      from: 'Jan 2024',
+      to: 'May 2025',
+      companyLink: 'https://www.uta.edu/honors',
+    },
+    {
+      company: 'Cognizant',
+      position: 'Full‑Stack Software Engineer Intern',
+      from: 'Feb 2023',
+      to: 'Aug 2023',
+      companyLink: 'https://www.cognizant.com',
+    },
+    {
+      company: 'Srinidhi Technologies Inc',
+      position: 'Full‑Stack Developer Intern',
+      from: 'Jul 2022',
+      to: 'Dec 2022',
+      companyLink: '',
+    },
+  ],
+
   certifications: [],
-  educations: [],
+
+  educations: [
+    {
+      institution: 'University of Texas at Arlington',
+      degree: 'M.S. in Computer Science',
+      from: 'Aug 2023',
+      to: 'May 2025',
+    },
+    {
+      institution: 'Jawaharlal Nehru Technological University',
+      degree: 'B.Tech in Electronics and Communication Engineering',
+      from: 'Aug 2019',
+      to: 'May 2023',
+    },
+  ],
+
   publications: [],
-  // Display articles from your medium, dev.to, or other sources. (Optional)
+
   blog: {
-    source: '', // medium | dev
-    username: '', // Ignored if you don't provide source
-    limit: 2, // How many articles to display. Max is 10.
+    source: '',
+    username: '',
+    limit: 2,
   },
+
   googleAnalytics: {
-    id: '', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
+    id: '',
   },
-  // Track visitor interaction and behavior. https://www.hotjar.com
+
   hotjar: {
     id: '',
     snippetVersion: 6,
   },
+
   themeConfig: {
     defaultTheme: 'lofi',
-
-    // Hides the switch in the navbar
-    // Useful if you want to support a single color mode
     disableSwitch: false,
-
-    // Should use the prefers-color-scheme media-query,
-    // using user system preferences, instead of the hardcoded defaultTheme
     respectPrefersColorScheme: false,
-
-    // Display the ring in Profile picture
     displayAvatarRing: true,
-
-    // Available themes. To remove any theme, exclude from here.
     themes: [
       'light',
       'dark',
@@ -131,8 +197,6 @@ const CONFIG = {
       'nord',
       'sunset',
     ],
-
-    // Custom theme, applied to `procyon` theme
     customTheme: {
       primary: '#fc055b',
       secondary: '#219aaf',
@@ -144,7 +208,6 @@ const CONFIG = {
     },
   },
 
-  // Optional Footer. Supports plain text or HTML.
   footer: `Made with <a 
       class="text-primary" href="https://github.com/arifszn/gitprofile"
       target="_blank"
